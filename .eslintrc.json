@@ -1,0 +1,59 @@
+{
+  "root": true,
+  "ignorePatterns": ["**/*"],
+  "plugins": ["@nrwl/nx"],
+  "overrides": [
+    {
+      "files": ["*.ts", "*.tsx", "*.js", "*.jsx"],
+      "rules": {
+        "@nrwl/nx/enforce-module-boundaries": [
+          "error",
+          {
+            "enforceBuildableLibDependency": true,
+            "allow": [],
+            "depConstraints": [
+              {
+                "sourceTag": "e2e",
+                "onlyDependOnLibsWithTags": [
+                  "*"
+                ]
+              },
+              {
+                "sourceTag": "domain:flights",
+                "onlyDependOnLibsWithTags": [
+                  "domain:flights",
+                  "domain:shared"
+                ]
+              },
+              {
+                "sourceTag": "domain:dashboard",
+                "onlyDependOnLibsWithTags": [
+                  "domain:dashboard",
+                  "domain:shared"
+                ]
+              },
+              {
+                "sourceTag": "domain:external",
+                "onlyDependOnLibsWithTags": [
+                  "domain:external",
+                  "domain:shared"
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "files": ["*.ts", "*.tsx"],
+      "extends": ["plugin:@nrwl/nx/typescript"],
+      "parserOptions": { "project": "./tsconfig.*?.json" },
+      "rules": {}
+    },
+    {
+      "files": ["*.js", "*.jsx"],
+      "extends": ["plugin:@nrwl/nx/javascript"],
+      "rules": {}
+    }
+  ]
+}
