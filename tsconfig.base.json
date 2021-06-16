@@ -15,14 +15,19 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
-      "@flight-workspace/flight-lib": [
-        "libs/flight-lib/src/index.ts"
+      "@flight-workspace/flight-lib": ["libs/flight-lib/src/index.ts"],
+      "@flight-workspace/logger-lib": ["libs/logger-lib/src/index.ts"],
+      "@flight-workspace/dashboard-lib": ["libs/dashboard-lib/src/index.ts"],
+      "@flight-workspace/luggage/domain": ["libs/luggage/domain/src/index.ts"],
+      "@flight-workspace/luggage/feature-checkin": [
+        "libs/luggage/feature-checkin/src/index.ts"
       ],
-      "@flight-workspace/logger-lib": [
-        "libs/logger-lib/src/index.ts"
+      "@flight-workspace/luggage/feature-report-loss": [
+        "libs/luggage/feature-report-loss/src/index.ts"
       ],
-      "@flight-workspace/dashboard-lib": [
-        "libs/dashboard-lib/src/index.ts"
+      "@flight-workspace/booking/domain": ["libs/booking/domain/src/index.ts"],
+      "@flight-workspace/booking/feature-manage": [
+        "libs/booking/feature-manage/src/index.ts"
       ]
     }
   },

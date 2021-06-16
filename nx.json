@@ -12,7 +12,7 @@
   "tasksRunnerOptions": {
     "default": {
       "runner": "@nrwl/workspace/tasks-runners/default",
-      "options": { 
+      "options": {
         "cacheableOperations": ["build", "lint", "test", "e2e"],
         "--cacheDirectory": "c:\\temp\\cache"
       }
@@ -22,13 +22,11 @@
     "default": {
       "runner": "./tools/task-runners/custom-task-runner",
       "options": {
-        "cacheableOperations": [
-          "build", "lint", "test", "e2e"
-        ],
+        "cacheableOperations": ["build", "lint", "test", "e2e"],
         "remoteDirectory": "c:\\temp\\remote-cache"
       }
     }
-  },  
+  },
   "projects": {
     "flight-app-e2e": {
       "tags": ["e2e"],
@@ -38,34 +36,25 @@
       "tags": ["e2e"],
       "implicitDependencies": ["flight-admin"]
     },
-    "dashboard-e2e": {
-      "tags": ["e2e"],
-      "implicitDependencies": ["dashboard"]
+    "dashboard-e2e": { "tags": ["e2e"], "implicitDependencies": ["dashboard"] },
+    "external-e2e": { "tags": ["e2e"], "implicitDependencies": ["external"] },
+    "flight-app": { "tags": ["domain:flights"] },
+    "flight-admin": { "tags": ["domain:flights"] },
+    "flight-lib": { "tags": ["domain:flights", "type:domain-logic"] },
+    "logger-lib": { "tags": ["domain:shared"] },
+    "dashboard": { "tags": ["domain:dashboard"] },
+    "dashboard-lib": { "tags": ["domain:dashboard", "type:domain-logic"] },
+    "external": { "tags": ["domain:external"] },
+    "luggage-domain": { "tags": ["domain:luggage", "type:domain-logic"] },
+    "luggage": { "tags": ["domain:luggage", "type:app"] },
+    "luggage-e2e": { "tags": [], "implicitDependencies": ["luggage"] },
+    "luggage-feature-checkin": { "tags": ["domain:luggage", "type:feature"] },
+    "luggage-feature-report-loss": {
+      "tags": ["domain:luggage", "type:feature"]
     },
-    "external-e2e": {
-      "tags": ["e2e"],
-      "implicitDependencies": ["external"]
-    },
-    "flight-app": {
-      "tags": ["domain:flights"]
-    },
-    "flight-admin": {
-      "tags": ["domain:flights"]
-    },
-    "flight-lib": {
-      "tags": ["domain:flights", "type:domain-logic"]
-    },
-    "logger-lib": {
-      "tags": ["domain:shared"]
-    },
-    "dashboard": {
-      "tags": ["domain:dashboard"]
-    },
-    "dashboard-lib": {
-      "tags": ["domain:dashboard", "type:domain-logic"]
-    },
-    "external": {
-      "tags": ["domain:external"]
-    }
+    "booking-domain": { "tags": ["domain:booking", "type:domain-logic"] },
+    "booking": { "tags": ["domain:booking", "type:app"] },
+    "booking-e2e": { "tags": [], "implicitDependencies": ["booking"] },
+    "booking-feature-manage": { "tags": ["domain:booking", "type:feature"] }
   }
 }

@@ -14,16 +14,11 @@
             "depConstraints": [
               {
                 "sourceTag": "e2e",
-                "onlyDependOnLibsWithTags": [
-                  "*"
-                ]
+                "onlyDependOnLibsWithTags": ["*"]
               },
               {
                 "sourceTag": "domain:flights",
-                "onlyDependOnLibsWithTags": [
-                  "domain:flights",
-                  "domain:shared"
-                ]
+                "onlyDependOnLibsWithTags": ["domain:flights", "domain:shared"]
               },
               {
                 "sourceTag": "domain:dashboard",
@@ -34,10 +29,53 @@
               },
               {
                 "sourceTag": "domain:external",
+                "onlyDependOnLibsWithTags": ["domain:external", "domain:shared"]
+              },
+              {
+                "sourceTag": "type:app",
                 "onlyDependOnLibsWithTags": [
-                  "domain:external",
-                  "domain:shared"
+                  "type:api",
+                  "type:feature",
+                  "type:ui",
+                  "type:domain-logic",
+                  "type:util"
                 ]
+              },
+              {
+                "sourceTag": "type:api",
+                "onlyDependOnLibsWithTags": [
+                  "type:ui",
+                  "type:domain-logic",
+                  "type:util"
+                ]
+              },
+              {
+                "sourceTag": "type:feature",
+                "onlyDependOnLibsWithTags": [
+                  "type:ui",
+                  "type:domain-logic",
+                  "type:util"
+                ]
+              },
+              {
+                "sourceTag": "type:ui",
+                "onlyDependOnLibsWithTags": ["type:domain-logic", "type:util"]
+              },
+              {
+                "sourceTag": "type:domain-logic",
+                "onlyDependOnLibsWithTags": ["type:util"]
+              },
+              {
+                "sourceTag": "domain:shared",
+                "onlyDependOnLibsWithTags": ["domain:shared"]
+              },
+              {
+                "sourceTag": "domain:luggage",
+                "onlyDependOnLibsWithTags": ["domain:luggage", "domain:shared"]
+              },
+              {
+                "sourceTag": "domain:booking",
+                "onlyDependOnLibsWithTags": ["domain:booking", "domain:shared"]
               }
             ]
           }
@@ -47,7 +85,9 @@
     {
       "files": ["*.ts", "*.tsx"],
       "extends": ["plugin:@nrwl/nx/typescript"],
-      "parserOptions": { "project": "./tsconfig.*?.json" },
+      "parserOptions": {
+        "project": "./tsconfig.*?.json"
+      },
       "rules": {}
     },
     {

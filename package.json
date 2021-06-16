@@ -45,6 +45,7 @@
     "@ngrx/entity": "^11.0.1",
     "@ngrx/router-store": "^11.0.1",
     "@ngrx/store": "^11.0.1",
+    "@ngrx/store-devtools": "10.0.0",
     "@ngx-translate/core": "^13.0.0",
     "@ngx-translate/http-loader": "^6.0.0",
     "@nrwl/angular": "11.2.12",
