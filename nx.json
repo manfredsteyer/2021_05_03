@@ -55,6 +55,9 @@
     "booking-domain": { "tags": ["domain:booking", "type:domain-logic"] },
     "booking": { "tags": ["domain:booking", "type:app"] },
     "booking-e2e": { "tags": [], "implicitDependencies": ["booking"] },
-    "booking-feature-manage": { "tags": ["domain:booking", "type:feature"] }
+    "booking-feature-manage": { "tags": ["domain:booking", "type:feature"] },
+    "booking-feature-manage-flights": {
+      "tags": ["domain:booking", "type:feature"]
+    }
   }
 }

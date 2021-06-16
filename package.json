@@ -51,6 +51,7 @@
     "@nrwl/angular": "11.2.12",
     "@swimlane/ngx-charts": "^17.0.0",
     "angular-oauth2-oidc": "^10.0.3",
+    "normalizr": "^3.6.1",
     "rxjs": "~6.6.3",
     "tslib": "^2.0.0",
     "zone.js": "^0.10.2"

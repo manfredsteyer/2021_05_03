@@ -28,6 +28,9 @@
       "@flight-workspace/booking/domain": ["libs/booking/domain/src/index.ts"],
       "@flight-workspace/booking/feature-manage": [
         "libs/booking/feature-manage/src/index.ts"
+      ],
+      "@flight-workspace/booking/feature-manage-flights": [
+        "libs/booking/feature-manage-flights/src/index.ts"
       ]
     }
   },

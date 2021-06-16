@@ -1017,6 +1017,43 @@
           }
         }
       }
+    },
+    "booking-feature-manage-flights": {
+      "projectType": "library",
+      "root": "libs/booking/feature-manage-flights",
+      "sourceRoot": "libs/booking/feature-manage-flights/src",
+      "prefix": "booking",
+      "architect": {
+        "build": {
+          "builder": "@nrwl/angular:ng-packagr-lite",
+          "options": {
+            "tsConfig": "libs/booking/feature-manage-flights/tsconfig.lib.json",
+            "project": "libs/booking/feature-manage-flights/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "libs/booking/feature-manage-flights/tsconfig.lib.prod.json"
+            }
+          }
+        },
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "libs/booking/feature-manage-flights/src/**/*.ts",
+              "libs/booking/feature-manage-flights/src/**/*.html"
+            ]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/booking/feature-manage-flights"],
+          "options": {
+            "jestConfig": "libs/booking/feature-manage-flights/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      }
     }
   }
 }

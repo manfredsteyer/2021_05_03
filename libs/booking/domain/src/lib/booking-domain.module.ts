@@ -1,11 +1,14 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { TicketEffects } from './+state/ticket/ticket.effects';
-import * as fromTicket from './+state/ticket/ticket.reducer';
 import { StoreModule } from '@ngrx/store';
 import { EffectsModule } from '@ngrx/effects';
+import { FlightEffects } from './+state/flight/flight.effects';
+import * as fromFlight from './+state/flight/flight.reducer';
 
 @NgModule({
-  imports: [CommonModule, StoreModule.forFeature(fromTicket.TICKET_FEATURE_KEY, fromTicket.reducer), EffectsModule.forFeature([TicketEffects])],
+  imports: [
+    CommonModule, 
+    StoreModule.forFeature(fromFlight.BOOKING_FEATURE_KEY, fromFlight.reducer), 
+    EffectsModule.forFeature([FlightEffects])],
 })
-export class BookingDomainModule {}
+export class BookingDomainModule { }

@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 
-import { select, Store, Action } from '@ngrx/store';
+import { select, Store } from '@ngrx/store';
 import { loadTicket } from '../+state/ticket/ticket.actions';
 
 import * as fromTicket from '../+state/ticket/ticket.reducer';

@@ -1,5 +1,5 @@
 import { createAction, props } from '@ngrx/store';
-import { Ticket } from '../../entities/ticket';
+import { TicketState } from '../../entities/ticket';
 
 export const loadTicket = createAction(
   '[Ticket] Load Ticket'
@@ -7,7 +7,7 @@ export const loadTicket = createAction(
 
 export const loadTicketSuccess = createAction(
   '[Ticket] Load Ticket Success',
-  props<{ ticket: Ticket[] }>()
+  props<{ ticket: TicketState[] }>()
 );
 
 export const loadTicketFailure = createAction(
