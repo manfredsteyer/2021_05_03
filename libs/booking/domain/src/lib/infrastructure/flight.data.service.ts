@@ -1,7 +1,7 @@
 import {Injectable} from '@angular/core';
 import {HttpClient } from '@angular/common/http';
 import {Observable, of} from 'rxjs';
-import {Flight, FlightState} from '../entities/flight';
+import {Flight } from '../entities/flight';
 
 @Injectable({ providedIn: 'root' })
 export class FlightDataService {

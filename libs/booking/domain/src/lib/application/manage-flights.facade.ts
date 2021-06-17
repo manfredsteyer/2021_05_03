@@ -7,7 +7,7 @@ import * as FlightSelectors from '../+state/flight/flight.selectors';
 
 @Injectable({ providedIn: 'root' })
 export class ManageFlightsFacade {
-  flightList$ = this.store.pipe(select(FlightSelectors.getAllFlights));
+  flightList$ = this.store.pipe(select(FlightSelectors.getFlightsWithTickets));
 
   constructor(private store: Store<fromFlight.BookingPartialState>) { }
 
